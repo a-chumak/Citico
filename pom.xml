@@ -9,6 +9,7 @@
     <version>1.0</version>
 
     <build>
+        <finalName>maven-unit-test</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -19,7 +20,14 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
         </plugins>
+
     </build>
 
     <properties>
@@ -31,7 +39,7 @@
         <ashot.version>1.5.4</ashot.version>
         <allure.version>2.10.0</allure.version>
         <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
-        <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <aspectj.version>1.8.10</aspectj.version>
     </properties>
 
